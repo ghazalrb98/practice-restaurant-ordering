@@ -4,12 +4,17 @@ const menuOptionsContainer = document.getElementById("menu-options-container");
 const orderContainer = document.getElementById("order-container");
 const orderItemsContainer = document.getElementById("order-items-container");
 const orderPrice = document.getElementById("order-price");
+const paymentModal = document.getElementById("payment-modal");
 
 document.addEventListener("click", function (e) {
   if (e.target.dataset.add) {
     handleAddClick(e.target.dataset.add);
   } else if (e.target.dataset.remove) {
     handleRemoveOrderItem(e.target.dataset.remove);
+  } else if (e.target.id === "payment-modal-cancel-btn") {
+    closePaymentModal();
+  } else if (e.target.id === "complete-order-btn") {
+    openPaymentModa();
   }
 });
 
@@ -44,6 +49,14 @@ function calculateTotalPrice(newPrice) {
   orderPrice.textContent = `$${parseInt(currentOrderPrice) + newPrice}`;
 }
 
+function closePaymentModal() {
+  paymentModal.classList.add("hidden");
+}
+
+function openPaymentModa() {
+  paymentModal.classList.remove("hidden");
+}
+
 function renderMenuOptions() {
   let menuOptionsHTML = "";
   menuArray.forEach(function (menuOption) {
@@ -64,13 +77,3 @@ function renderMenuOptions() {
 }
 
 renderMenuOptions();
-
-/*
-<div class="order-item-row">
-            <div class="order-item">
-              <h3 class="order-item-title">Pizza</h3>
-              <div class="order-item-remove-btn">remove</div>
-            </div>
-            <p>$14</p>
-          </div>
-*/

@@ -40,6 +40,11 @@ h3 {
   font-size: 1.5rem;
 }
 
+button {
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+}
+
 .price {
   font-size: 1.2rem;
   margin: 0;
@@ -77,7 +82,6 @@ h3 {
 }
 
 .add-btn {
-  font-family: "Inter", sans-serif;
   font-size: 1.5rem;
   border-radius: 50%;
   width: 3rem;
@@ -134,18 +138,81 @@ h3 {
   cursor: pointer;
 }
 
-#complete-order-btn {
+/* Utility classes */
+
+.hidden {
+  display: none;
+}
+
+/* Card details modal */
+
+#payment-modal {
+  text-align: right;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  background: white;
+  border-radius: 0.2rem;
+  filter: drop-shadow(0 0 20rem black);
+}
+
+#payment-modal-cancel-btn {
+  font-size: 1rem;
+  border: none;
+  background: none;
+  padding: 0.8rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card-details-modal {
+  text-align: center;
+  padding: 1rem 2rem 2rem;
+}
+
+.card-details-modal-title {
+  font-size: 1.3rem;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 2rem;
+  font-weight: 900;
+}
+
+.card-details-modal-form input,
+.card-details-modal-form button {
+  width: 20rem;
+  display: block;
+}
+
+.card-details-modal-form input {
+  font-size: 1rem;
+  padding: 1em;
+  margin: 1.2rem 0;
+  border: 1px solid #757575;
+  border-radius: 0.12rem;
+}
+
+.card-details-modal-form button {
+  margin-top: 2rem;
+}
+
+.submit-btn {
   width: 100%;
   background: #16db99;
   color: white;
   padding: 1rem;
   border: none;
   border-radius: 0.12rem;
-  font-weight: 600;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
-/* Utility classes */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
-.hidden {
-  display: none;
+input[type="number"] {
+  -moz-appearance: textfield;
 }

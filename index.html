@@ -4,7 +4,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter&family=Smythe&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Smythe&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -28,7 +28,39 @@
           <h3>Total price:</h3>
           <p id="order-price" class="price">$0</p>
         </div>
-        <button id="complete-order-btn">Complete order</button>
+        <button id="complete-order-btn" class="submit-btn">
+          Complete order
+        </button>
+      </div>
+      <div id="payment-modal" class="hidden">
+        <button id="payment-modal-cancel-btn">X</button>
+        <div class="card-details-modal">
+          <h2 class="card-details-modal-title">Enter card details</h2>
+          <form class="card-details-modal-form">
+            <input
+              type="text"
+              name="userName"
+              placeholder="Enter your name"
+              aria-label="name"
+              required
+            />
+            <input
+              type="number"
+              name="cardNumber"
+              placeholder="Enter card number"
+              aria-label="card number"
+              required
+            />
+            <input
+              type="number"
+              name="cvv"
+              placeholder="Enter CVV"
+              aria-label="CVV"
+              required
+            />
+            <button class="submit-btn" type="submit">Pay</button>
+          </form>
+        </div>
       </div>
     </main>
     <script src="index.js" type="module"></script>
