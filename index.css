@@ -131,6 +131,7 @@ h3 {
 
 .order-item-remove-btn {
   color: #bbbbbb;
+  cursor: pointer;
 }
 
 #complete-order-btn {
