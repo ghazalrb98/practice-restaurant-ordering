@@ -11,26 +11,32 @@
   <body>
     <header>
       <div id="header">
-        <h1>Jimmy's Dinner</h1>
-        <h2>The best burgers and pizzas in town.</h2>
+        <div class="container">
+          <h1>Jimmy's Dinner</h1>
+          <h2>The best burgers and pizzas in town.</h2>
+        </div>
       </div>
     </header>
     <main>
-      <div id="menu-options-container">
-        <!-- menu options  -->
+      <div class="container">
+        <div id="menu-options-container">
+          <!-- menu options  -->
+        </div>
       </div>
-      <div id="order-container" class="hidden">
-        <h2 id="order-title">Your Order</h2>
-        <div id="order-items-container">
-          <!-- order items -->
+      <div class="container">
+        <div id="order-container" class="hidden">
+          <h2 id="order-title">Your Order</h2>
+          <div id="order-items-container">
+            <!-- order items -->
+          </div>
+          <div class="order-price-container">
+            <h3>Total price:</h3>
+            <p id="order-price" class="price">$0</p>
+          </div>
+          <button id="complete-order-btn" class="submit-btn">
+            Complete order
+          </button>
         </div>
-        <div class="order-price-container">
-          <h3>Total price:</h3>
-          <p id="order-price" class="price">$0</p>
-        </div>
-        <button id="complete-order-btn" class="submit-btn">
-          Complete order
-        </button>
       </div>
       <div id="payment-modal" class="hidden">
         <button id="payment-modal-cancel-btn">X</button>
