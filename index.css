@@ -67,6 +67,11 @@ button {
   font-size: 1.1rem;
 }
 
+.submit-btn:hover,
+.submit-btn:active {
+  background-color: #16aa79;
+}
+
 /* Menu option */
 
 .menu-option {
@@ -212,6 +217,19 @@ button {
 .card-details-modal-form button {
   margin-top: 2rem;
 }
+
+/* Complete order message */
+
+#complete-order-message {
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 1.5em 2em;
+  background-color: #ecfdf5;
+  color: #065f46;
+  border-radius: 0.2rem;
+}
+
+/* Input */
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

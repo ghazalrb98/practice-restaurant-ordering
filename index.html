@@ -38,11 +38,16 @@
           </button>
         </div>
       </div>
+      <div class="container">
+        <p id="complete-order-message" class="hidden">
+          <!-- Complete order message to user -->
+        </p>
+      </div>
       <div id="payment-modal" class="hidden">
         <button id="payment-modal-cancel-btn">X</button>
         <div class="card-details-modal">
           <h2 class="card-details-modal-title">Enter card details</h2>
-          <form class="card-details-modal-form">
+          <form id="card-details" class="card-details-modal-form">
             <input
               type="text"
               name="userName"

@@ -77,3 +77,19 @@ function renderMenuOptions() {
 }
 
 renderMenuOptions();
+
+document.addEventListener("submit", function (e) {
+  e.preventDefault();
+  paymentModal.classList.add("hidden");
+  orderContainer.classList.add("hidden");
+
+  const formEl = document.getElementById("card-details");
+  const completeOrderMessage = document.getElementById(
+    "complete-order-message"
+  );
+  const formData = new FormData(formEl);
+  completeOrderMessage.innerHTML = `Thanks, ${formData.get(
+    "userName"
+  )}! Your order is on its way!`;
+  completeOrderMessage.classList.remove("hidden");
+});
